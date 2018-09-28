@@ -1,0 +1,10 @@
+requires 'Mojolicious';
+requires 'DateTime';
+requires 'DateTime::Format::RFC3339';
+requires 'DateTime::Locale';
+requires 'IO::Socket::SSL';
+requires 'File::Copy::Recursive';
+requires 'XML::Atom::SimpleFeed';
+requires 'Archive::Zip';
+requires 'Text::Slugify';
+requires 'Pandoc';

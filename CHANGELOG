@@ -1,0 +1,22 @@
+Revision history for Last
+
+0.3.0  2017-09-30
+	- Add Markdown support (need Pandoc to work)
+
+0.2.0  2017-09-24
+	- Use API to fetch toots
+	- Video attachments handling
+	- Add attachments cache
+
+0.1.2  2017-09-15
+	- Support images on different hosts than the Mastodon pod
+
+0.1.1  2017-06-13
+	- Remove warning if no license chosen in configuration
+
+0.1  2017-06-13
+	- HTML page generation
+	- Atom feed
+	- Epub generation
+	- Theme system
+	- Pagination system

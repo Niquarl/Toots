@@ -1,0 +1,4 @@
+*.swp
+local/*
+public/*
+cache/*

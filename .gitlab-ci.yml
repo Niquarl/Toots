@@ -1,0 +1,26 @@
+image: hatsoftwares/last:latest
+pages:
+  cache:
+    key: "last_cache"
+    untracked: true
+    paths:
+      - local
+      - cache
+  script:
+    - rm -rf public
+    - if [[ -d last ]]; then rm -rf last/; fi
+    - for i in themes/*; do if [[ $i != 'themes/default' ]]; then cp -r $i last/themes; fi; done
+    - git clone https://framagit.org/luc/last
+    - cp last.conf last/
+    - if [[ -d local ]]; then mv local last; fi
+    - if [[ -d cache ]]; then mv cache last; fi
+    - if [[ -e LastCustom.pm ]]; then cp LastCustom.pm last; fi
+    - cd last
+    - carton install
+    - carton exec ./build.pl
+    - mv public local cache ..
+  artifacts:
+    paths:
+    - public
+  only:
+    - master
